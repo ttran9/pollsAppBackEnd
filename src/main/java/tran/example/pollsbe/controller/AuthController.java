@@ -50,7 +50,7 @@ public class AuthController {
         this.userRepository = userRepository;
         this.roleRepository = roleRepository;
         this.passwordEncoder = passwordEncoder;
-        this.tokenProvider = new JwtTokenProvider();
+        this.tokenProvider = jwtTokenProvider;
     }
 
     @PostMapping("/signin")
