@@ -1,8 +1,11 @@
 # Overview
 
-- This repository follows the overall tutorial seen [here](https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-1/)
+- This repository follows the tutorial seen [here](https://www.callicoder.com/spring-boot-spring-security-jwt-mysql-react-app-part-1/)
 
-- This upload will be up to the end of part 1 which is just setting up the back-end with basic models and ensuring we can connect to a MySQL db.
-    - Note the tutorial uses localhost but I decided to just connect to a MySQL database running inside of a local docker container.
-    - I also slightly deviated from the tutorial by using a seed class to populate the user and admin roles.
-        - I can just change the roles to be false in order to not re-populate the roles table every time the database is run.
+- This upload will be up to the end of part 2 which implements Spring Security using JWT authentication and APIs used for
+user register and login.
+    - In application.properties I store the "app.jwtSecret" inside of an environment variable.
+        - I had an issue with using the @Value annotation on the data member directly in the JwtTokenProvider class so
+        the solution I used was just use constructor based DI.
+            - I followed [this](https://stackoverflow.com/questions/25764459/spring-boot-application-properties-value-not-populating) stackoverflow thread
+    - I also made slight modifications when using Dependency Injection (DI).
