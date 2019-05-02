@@ -4,5 +4,5 @@
 
 - This upload will be up to the end of part 1 which is just setting up the back-end with basic models and ensuring we can connect to a MySQL db.
     - Note the tutorial uses localhost but I decided to just connect to a MySQL database running inside of a local docker container.
-
-- Master is up to date with part 1.
+    - I also slightly deviated from the tutorial by using a seed class to populate the user and admin roles.
+        - I can just change the roles to be false in order to not re-populate the roles table every time the database is run.
